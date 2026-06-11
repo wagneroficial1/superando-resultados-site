@@ -39,6 +39,19 @@ const tools = [
     url: 'https://share.epidemicsound.com/i3ouua',
   },
   {
+    name: 'ElevenLabs',
+    description: 'Síntese de voz ultra-realista com clonagem vocal. Narração profissional com IA.',
+    category: 'Voz IA',
+    gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    name: 'Google AI Studio',
+    description: 'Acesso gratuito à API do Gemini 2.5 Pro/Flash. Contexto de 1 milhão de tokens. Limite de taxa de 15 RPM. Sem custo.',
+    category: 'Voz IA',
+    gradient: 'from-teal-500 to-green-500',
+    url: 'https://aistudio.google.com/apps',
+  },
+  {
     name: 'Runway ML',
     description: 'Geração e edição de vídeos com IA avançada. Crie conteúdo visual impressionante em minutos.',
     category: 'Vídeo IA',
@@ -61,19 +74,6 @@ const tools = [
     description: 'Plataforma completa de geração de imagens com modelos especializados.',
     category: 'Imagem IA',
     gradient: 'from-violet-500 to-purple-600',
-  },
-  {
-    name: 'ElevenLabs',
-    description: 'Síntese de voz ultra-realista com clonagem vocal. Narração profissional com IA.',
-    category: 'Voz IA',
-    gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    name: 'Google AI Studio',
-    description: 'Acesso gratuito à API do Gemini 2.5 Pro/Flash. Contexto de 1 milhão de tokens. Limite de taxa de 15 RPM. Sem custo.',
-    category: 'Voz IA',
-    gradient: 'from-teal-500 to-green-500',
-    url: 'https://aistudio.google.com/apps',
   },
   {
     name: 'Make (Integromat)',
