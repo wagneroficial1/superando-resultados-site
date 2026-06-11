@@ -9,7 +9,8 @@ const resources = [
     icon: CheckSquare,
     gradient: 'from-blue-500 to-cyan-500',
     type: 'PDF',
-    pages: '12 páginas',
+    pages: '2 páginas',
+    file: '/checklist-videos-virais.pdf',
   },
   {
     title: 'Guia de Ferramentas IA',
