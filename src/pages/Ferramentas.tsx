@@ -28,7 +28,7 @@ const tools = [
     name: 'Verdent',
     description: 'Plataforma de IA para criar sites, apps e projetos digitais completos usando linguagem natural, Plan Mode e Agent Mode.',
     category: 'Vibe Coding',
-    gradient: 'from-indigo-500 to-violet-500',
+    gradient: 'from-green-500 to-emerald-500',
     url: 'https://www.verdent.ai/?id=701090',
   },
   {
@@ -39,10 +39,25 @@ const tools = [
     url: 'https://share.epidemicsound.com/i3ouua',
   },
   {
+    name: 'MagicLight',
+    description: 'Ferramenta de Inteligência Artificial para criação e edição de vídeos com recursos visuais avançados para criadores de conteúdo.',
+    category: 'Vídeo IA',
+    gradient: 'from-sky-500 to-blue-600',
+    url: 'https://www.magiclight.ai/pt/?code=spmgxc3',
+  },
+  {
     name: 'ElevenLabs',
     description: 'Síntese de voz ultra-realista com clonagem vocal. Narração profissional com IA.',
     category: 'Voz IA',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'from-indigo-500 to-violet-500',
+    url: 'https://try.elevenlabs.io/bgii1180vjpy',
+  },
+  {
+    name: 'ChatGPT',
+    description: 'Assistente IA para roteiros, ideias, títulos e otimização de conteúdo.',
+    category: 'Pesquisa',
+    gradient: 'from-emerald-500 to-teal-500',
+    url: 'https://chatgpt.com/',
   },
   {
     name: 'Google AI Studio',
@@ -52,10 +67,32 @@ const tools = [
     url: 'https://aistudio.google.com/apps',
   },
   {
+    name: 'Meta AI',
+    description: 'Plataforma completa de geração de imagens e vídeos com modelos especializados.',
+    category: 'Imagem IA',
+    gradient: 'from-orange-500 to-red-500',
+    url: 'https://meta.ai',
+  },
+  {
+    name: 'Google NotebookLM',
+    description: 'Podcasts gerados automaticamente, análise de fontes, 100 cadernos gratuitos.',
+    category: 'Automação',
+    gradient: 'from-amber-500 to-orange-500',
+    url: 'https://notebooklm.google.com/notebook/719b76f8-f499-4f5c-b1e7-b243f58e744e?addSource=true',
+  },
+    {
+    name: 'Google ImageFX',
+    description: 'Modelo Imagen do Google. Plano gratuito generoso com conta do Google.',
+    category: 'Imagem IA',
+    gradient: 'from-cyan-500 to-blue-500',
+    url: 'https://labs.google/fx/pt',
+  },
+  {
     name: 'Runway ML',
     description: 'Geração e edição de vídeos com IA avançada. Crie conteúdo visual impressionante em minutos.',
     category: 'Vídeo IA',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-cyan-500 to-blue-500',
+    url: 'https://runwayml.com/',
   },
   {
     name: 'HeyGen',
@@ -74,36 +111,6 @@ const tools = [
     description: 'Plataforma completa de geração de imagens com modelos especializados.',
     category: 'Imagem IA',
     gradient: 'from-violet-500 to-purple-600',
-  },
-  {
-    name: 'Make (Integromat)',
-    description: 'Automação de fluxos de trabalho para criadores. Conecte suas ferramentas favoritas.',
-    category: 'Automação',
-    gradient: 'from-orange-500 to-red-500',
-  },
-  {
-    name: 'Zapier AI',
-    description: 'Automatize tarefas repetitivas com inteligência artificial integrada.',
-    category: 'Automação',
-    gradient: 'from-amber-500 to-orange-500',
-  },
-  {
-    name: 'Perplexity AI',
-    description: 'Pesquisa inteligente com IA para encontrar informações e tendências rapidamente.',
-    category: 'Pesquisa',
-    gradient: 'from-cyan-500 to-blue-500',
-  },
-  {
-    name: 'ChatGPT',
-    description: 'Assistente IA para roteiros, ideias, títulos e otimização de conteúdo.',
-    category: 'Pesquisa',
-    gradient: 'from-emerald-500 to-teal-500',
-  },
-  {
-    name: 'MagicLight',
-    description: 'Ferramenta de Inteligência Artificial para criação e edição de vídeos com recursos visuais avançados para criadores de conteúdo.',
-    category: 'Vídeo IA',
-    gradient: 'from-sky-500 to-blue-600',
   },
 ]
 
