@@ -18,6 +18,27 @@ const categoryIcons: Record<string, React.ElementType> = {
 
 const tools = [
   {
+  name: 'Virathumb',
+    description: 'Ferramenta de IA focada em criar thumbnails mais chamativas e otimizadas para aumentar o CTR de vídeos no YouTube.',
+    category: 'Thumbnail IA',
+    gradient: 'from-rose-500 to-pink-500',
+    url: 'https://virathumb.com/?via=supres',
+  },
+  {
+    name: 'Verdent',
+    description: 'Plataforma de IA para criar sites, apps e projetos digitais completos usando linguagem natural, Plan Mode e Agent Mode.',
+    category: 'Vibe Coding',
+    gradient: 'from-indigo-500 to-violet-500',
+    url: 'https://www.verdent.ai/?id=701090',
+  },
+  {
+    name: 'Epidemic Sound',
+    description: 'Biblioteca profissional de músicas e efeitos sonoros para criadores de conteúdo, vídeos no YouTube, anúncios e projetos digitais.',
+    category: 'Música / Áudio',
+    gradient: 'from-yellow-500 to-orange-500',
+    url: 'https://share.epidemicsound.com/i3ouua',
+  },
+  {
     name: 'Runway ML',
     description: 'Geração e edição de vídeos com IA avançada. Crie conteúdo visual impressionante em minutos.',
     category: 'Vídeo IA',
@@ -76,27 +97,6 @@ const tools = [
     description: 'Assistente IA para roteiros, ideias, títulos e otimização de conteúdo.',
     category: 'Pesquisa',
     gradient: 'from-emerald-500 to-teal-500',
-  },
-  {
-  name: 'Virathumb',
-    description: 'Ferramenta de IA focada em criar thumbnails mais chamativas e otimizadas para aumentar o CTR de vídeos no YouTube.',
-    category: 'Thumbnail IA',
-    gradient: 'from-rose-500 to-pink-500',
-    url: 'https://virathumb.com/?via=supres',
-  },
-  {
-    name: 'Verdent',
-    description: 'Plataforma de IA para criar sites, apps e projetos digitais completos usando linguagem natural, Plan Mode e Agent Mode.',
-    category: 'Vibe Coding',
-    gradient: 'from-indigo-500 to-violet-500',
-    url: 'https://www.verdent.ai/?id=701090',
-  },
-  {
-    name: 'Epidemic Sound',
-    description: 'Biblioteca profissional de músicas e efeitos sonoros para criadores de conteúdo, vídeos no YouTube, anúncios e projetos digitais.',
-    category: 'Música / Áudio',
-    gradient: 'from-yellow-500 to-orange-500',
-    url: 'https://share.epidemicsound.com/i3ouua',
   },
   {
     name: 'MagicLight',
@@ -174,7 +174,9 @@ export default function Ferramentas() {
                     {tool.description}
                   </p>
                   <button
-                    onClick={() => window.open(tool.url, '_blank')}
+                    onClick={() => {
+                      if (tool.url) window.open(tool.url, '_blank')
+                    }}
                     className="w-full py-3 rounded-xl glass hover:bg-purple-500/20 transition-all text-sm font-semibold flex items-center justify-center gap-2 text-purple-300"
                   >
                     Acessar Ferramenta
