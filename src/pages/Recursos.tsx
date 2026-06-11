@@ -19,6 +19,7 @@ const resources = [
     gradient: 'from-purple-500 to-pink-500',
     type: 'PDF',
     pages: '28 páginas',
+    file: '/guia-ferramentas-ia.pdf',
   },
   {
     title: 'Checklist de Thumbnail',
@@ -27,14 +28,16 @@ const resources = [
     gradient: 'from-pink-500 to-rose-500',
     type: 'PDF',
     pages: '8 páginas',
+    file: '/checklist-thumbnail.pdf',
   },
   {
     title: 'Fluxo de Produção com IA',
     description: 'Workflow completo de produção de vídeos utilizando ferramentas de IA em cada etapa.',
     icon: Workflow,
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-orange-500 to-amber-500',
     type: 'PDF',
     pages: '16 páginas',
+    file: '/fluxo-producao-com-ia.pdf',
   },
 ]
 
