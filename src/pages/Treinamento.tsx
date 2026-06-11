@@ -126,10 +126,10 @@ export default function Treinamento() {
               {[
                 'Foco 100% prático e aplicável',
                 'Direto ao ponto, sem enrolação',
-                'Ferramentas reais que você pode usar hoje',
-                'Exemplos aplicáveis ao seu canal',
+                'Mentoria com os alunos ao vivo',
+                'Acesso à comunidade dos alunos',
                 'Estratégias para produzir com qualidade',
-                'Velocidade na produção com IA',
+                'Agilidade na produção com IA',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
