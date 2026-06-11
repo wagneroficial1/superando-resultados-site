@@ -33,7 +33,7 @@ const tools = [
   },
   {
     name: 'Epidemic Sound',
-    description: 'Biblioteca profissional de músicas e efeitos sonoros para criadores de conteúdo, vídeos no YouTube, anúncios e projetos digitais.',
+    description: 'Biblioteca profissional de músicas e efeitos sonoros para criadores de conteúdo, vídeos no YouTube, teste Grátis de 30 dias.',
     category: 'Música / Áudio',
     gradient: 'from-yellow-500 to-orange-500',
     url: 'https://share.epidemicsound.com/i3ouua',
