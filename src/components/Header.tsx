@@ -8,6 +8,7 @@ const navLinks = [
   { path: '/recursos', label: 'Recursos' },
   { path: '/videos', label: 'Vídeos' },
   { path: '/laboratorio', label: 'Lab IA' },
+  { path: '/treinamento', label: 'Treinamento' },
   { path: '/sobre', label: 'Sobre' },
   { path: '/contato', label: 'Contato' },
 ]
