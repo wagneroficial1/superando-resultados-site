@@ -73,6 +73,7 @@ const tools = [
     description: 'Acesso gratuito à API do Gemini 2.5 Pro/Flash. Contexto de 1 milhão de tokens. Limite de taxa de 15 RPM. Sem custo.',
     category: 'Voz IA',
     gradient: 'from-teal-500 to-green-500',
+    url: 'https://aistudio.google.com/apps',
   },
   {
     name: 'Make (Integromat)',
