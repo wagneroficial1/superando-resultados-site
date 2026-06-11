@@ -1,107 +1,216 @@
-import { Target, Lightbulb, Rocket, Award, Users, Zap } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Sparkles, Eye, Video, Brain, Play, ImageIcon, Mic, Zap, Wrench, Code, TrendingUp, GraduationCap, DollarSign, Clapperboard, Target } from 'lucide-react'
 import Section from '../components/Section'
 import SEO from '../components/SEO'
+import { useInView, useCountUp } from '../hooks/useAnimations'
 
-const milestones = [
-  { year: '2019', title: 'Início da Jornada', description: 'Primeiro vídeo publicado sobre marketing digital e crescimento no YouTube.', icon: Rocket },
-  { year: '2020', title: 'Foco em IA', description: 'Pivotamos para conteúdo sobre inteligência artificial aplicada à criação de conteúdo.', icon: Lightbulb },
-  { year: '2021', title: '50K Inscritos', description: 'Alcançamos a marca de 50 mil inscritos com conteúdo sobre ferramentas IA.', icon: Users },
-  { year: '2022', title: 'Comunidade Ativa', description: 'Lançamento da comunidade exclusiva para criadores que utilizam IA.', icon: Zap },
-  { year: '2023', title: '100K Inscritos', description: 'Placa de prata do YouTube e reconhecimento como referência em IA para criadores.', icon: Award },
-  { year: '2024', title: 'Plataforma SR', description: 'Lançamento da plataforma Superando Resultados com ferramentas e recursos exclusivos.', icon: Target },
+function StatCard({ value, suffix, label, gradient }: { value: number; suffix: string; label: string; gradient: string }) {
+  const { ref, isInView } = useInView(0.3)
+  const count = useCountUp(value, 2000, isInView)
+
+  return (
+    <div ref={ref} className="glass rounded-2xl p-8 text-center glow-card group">
+      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${gradient} opacity-80 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform`}>
+        <Sparkles size={28} className="text-white" />
+      </div>
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold gradient-text mb-3">
+        {count.toLocaleString('pt-BR')}{suffix}
+      </div>
+      <p className="text-gray-400 text-base">{label}</p>
+    </div>
+  )
+}
+
+const specialties = [
+  {
+    title: 'YouTube Growth',
+    gradient: 'from-blue-500 to-cyan-500',
+    icon: Play,
+    items: [
+      { label: 'Estratégia de Conteúdo', icon: TrendingUp },
+      { label: 'CTR', icon: Target },
+      { label: 'Retenção', icon: Eye },
+      { label: 'Títulos', icon: Sparkles },
+      { label: 'Thumbnails', icon: ImageIcon },
+      { label: 'SEO para YouTube', icon: Play },
+    ],
+  },
+  {
+    title: 'Inteligência Artificial',
+    gradient: 'from-purple-500 to-pink-500',
+    icon: Brain,
+    items: [
+      { label: 'IA para Vídeos', icon: Video },
+      { label: 'IA para Imagens', icon: ImageIcon },
+      { label: 'IA para Voz', icon: Mic },
+      { label: 'Automação', icon: Zap },
+      { label: 'Ferramentas de IA', icon: Wrench },
+      { label: 'Vibe Coding', icon: Code },
+    ],
+  },
+  {
+    title: 'Treinamentos',
+    gradient: 'from-pink-500 to-orange-500',
+    icon: GraduationCap,
+    items: [
+      { label: 'Crescimento no YouTube', icon: TrendingUp },
+      { label: 'Edição de Vídeo', icon: Clapperboard },
+      { label: 'Criação de Thumbnails', icon: ImageIcon },
+      { label: 'Ferramentas de IA', icon: Wrench },
+      { label: 'Monetização', icon: DollarSign },
+      { label: 'Produção de Conteúdo', icon: Video },
+    ],
+  },
 ]
 
 export default function Sobre() {
   return (
-    <div className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="pt-20">
       <SEO
         title="Sobre"
-        description="Conheça a história e missão do Superando Resultados. Democratizando o uso de IA para criadores de conteúdo no YouTube."
+        description="Conheça o Superando Resultados. Ajudamos criadores de conteúdo a crescer no YouTube utilizando Inteligência Artificial, estratégias modernas e otimização de resultados."
         path="/sobre"
       />
-      <div className="max-w-6xl mx-auto">
-        <Section>
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              Sobre o <span className="gradient-text">Superando Resultados</span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Conheça nossa história e missão de democratizar o uso de IA para criadores de conteúdo.
-            </p>
-          </div>
-        </Section>
 
-        {/* Mission Section */}
-        <Section className="mb-20">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="glass rounded-2xl p-8 glow-card">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-6">
-                <Target size={28} className="text-white" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4">Nossa Missão</h2>
-              <p className="text-gray-400 leading-relaxed">
-                Capacitar criadores de conteúdo com as melhores ferramentas e estratégias de inteligência artificial, 
-                tornando a tecnologia acessível para todos que desejam crescer no YouTube e nas plataformas digitais.
-              </p>
-            </div>
-            <div className="glass rounded-2xl p-8 glow-card">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6">
-                <Lightbulb size={28} className="text-white" />
-              </div>
-              <h2 className="text-2xl font-bold mb-4">Especialização</h2>
-              <p className="text-gray-400 leading-relaxed">
-                Somos especializados na interseção entre inteligência artificial e criação de conteúdo. 
-                Testamos, analisamos e ensinamos como utilizar as ferramentas mais avançadas do mercado 
-                para maximizar resultados com eficiência.
-              </p>
-            </div>
-          </div>
-        </Section>
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 dot-pattern opacity-30" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/5 rounded-full blur-[150px]" />
 
-        {/* Timeline */}
-        <Section>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-purple-300 mb-8 animate-[fade-in_0.6s_ease]">
+            <Sparkles size={16} className="text-purple-400" />
+            Quem Somos
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-[slide-up_0.8s_ease]">
+            Sobre o{' '}
+            <span className="gradient-text">Superando Resultados</span>
+          </h1>
+
+          <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-[slide-up_1s_ease]">
+            Ajudamos criadores de conteúdo a crescer no YouTube utilizando Inteligência Artificial, estratégias modernas de conteúdo, edição profissional e otimização de resultados.
+          </p>
+        </div>
+      </section>
+
+      {/* Estatísticas */}
+      <Section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Nossa <span className="gradient-text">Trajetória</span>
+              Números que <span className="gradient-text">comprovam</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Resultados reais construídos com consistência, estratégia e inteligência artificial.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <StatCard value={193000} suffix="+" label="Inscritos" gradient="from-blue-500 to-cyan-500" />
+            <StatCard value={9580000} suffix="+" label="Visualizações" gradient="from-purple-500 to-pink-500" />
+            <StatCard value={320} suffix="+" label="Vídeos Publicados" gradient="from-pink-500 to-orange-500" />
+            <StatCard value={720} suffix="+" label="Alunos do Treinamento" gradient="from-green-500 to-emerald-500" />
+          </div>
+        </div>
+      </Section>
+
+      {/* Especialidades */}
+      <Section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Nossa <span className="gradient-text">Especialidade</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Combinamos YouTube, Inteligência Artificial e educação para ajudar criadores a alcançar resultados reais.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {specialties.map((specialty) => (
+              <div key={specialty.title} className="glass rounded-2xl p-8 glow-card group">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${specialty.gradient} opacity-80 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <specialty.icon size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-5">{specialty.title}</h3>
+                <div className="space-y-3">
+                  {specialty.items.map((item) => (
+                    <div key={item.label} className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
+                        <item.icon size={16} className="text-purple-400" />
+                      </div>
+                      <span className="text-gray-300 text-sm">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Missão */}
+      <Section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Nossa <span className="gradient-text">Missão</span>
             </h2>
           </div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:-translate-x-px" />
+          <div className="relative glass rounded-2xl p-8 sm:p-12 text-center overflow-hidden glow-card">
+            <div className="absolute inset-0 dot-pattern opacity-20" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]" />
 
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => {
-                const Icon = milestone.icon
-                const isLeft = index % 2 === 0
-
-                return (
-                  <Section key={milestone.year}>
-                    <div className={`relative flex items-center gap-8 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                      {/* Content */}
-                      <div className={`flex-1 ml-12 md:ml-0 ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
-                        <div className={`glass rounded-2xl p-6 glow-card inline-block ${isLeft ? 'md:ml-auto' : ''}`}>
-                          <span className="text-sm font-bold text-purple-400">{milestone.year}</span>
-                          <h3 className="text-lg font-bold mt-1 mb-2">{milestone.title}</h3>
-                          <p className="text-gray-400 text-sm leading-relaxed">{milestone.description}</p>
-                        </div>
-                      </div>
-
-                      {/* Icon */}
-                      <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center z-10 shadow-lg shadow-purple-500/20">
-                        <Icon size={16} className="text-white" />
-                      </div>
-
-                      {/* Spacer for other side */}
-                      <div className="hidden md:block flex-1" />
-                    </div>
-                  </Section>
-                )
-              })}
+            <div className="relative z-10">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-8">
+                <Target size={32} className="text-white" />
+              </div>
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Democratizar o acesso às melhores estratégias de crescimento no YouTube e às ferramentas mais avançadas de Inteligência Artificial, ajudando criadores a produzir conteúdo de maior qualidade e alcançar resultados reais.
+              </p>
             </div>
           </div>
-        </Section>
-      </div>
+        </div>
+      </Section>
+
+      {/* CTA Final */}
+      <Section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative glass rounded-2xl p-8 sm:p-12 text-center overflow-hidden">
+            <div className="absolute inset-0 dot-pattern opacity-20" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]" />
+
+            <div className="relative z-10">
+              <Sparkles size={40} className="text-purple-400 mx-auto mb-6" />
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Pronto para acelerar seus <span className="gradient-text">resultados</span>?
+              </h2>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                Conheça nossas ferramentas, recursos gratuitos e treinamento completo para criadores de conteúdo.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  to="/ferramentas"
+                  className="gradient-btn px-8 py-4 rounded-xl text-base font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
+                  Conhecer Ferramentas
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  to="/treinamento"
+                  className="px-8 py-4 rounded-xl text-base font-semibold glass hover:bg-white/10 transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
+                  Ver Treinamento
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
     </div>
   )
 }
