@@ -90,7 +90,8 @@ export default function Recursos() {
     setIsLoading(false)
 
     if (error) {
-      alert('Não foi possível liberar o material agora. Tente novamente.')
+      console.error('Erro ao salvar lead:', error)
+      alert(error.message)
       return
     }
 
