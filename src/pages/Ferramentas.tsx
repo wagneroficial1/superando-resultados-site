@@ -66,12 +66,20 @@ const tools = [
     gradient: 'from-teal-500 to-green-500',
     url: 'https://aistudio.google.com/apps',
   },
+  
   {
     name: 'Meta AI',
     description: 'Plataforma completa de geração de imagens e vídeos com modelos especializados.',
     category: 'Imagem IA',
     gradient: 'from-orange-500 to-red-500',
     url: 'https://meta.ai',
+  },
+  {
+    name: 'Google Flow',
+    description: 'Modelo Imagen do NAno Banana2 e vídeos com Veo3.1. Plano gratuito com conta do Google.',
+    category: 'Imagem e Vídeo IA',
+    gradient: 'from-cyan-500 to-blue-500',
+    url: 'https://labs.google/fx/pt/tools/flow',
   },
   {
     name: 'Google NotebookLM',
