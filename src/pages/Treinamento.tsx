@@ -35,7 +35,9 @@ export default function Treinamento() {
 
           <div className="flex items-center justify-center animate-[slide-up_1.2s_ease]">
             <a
-              href="#"
+              href="https://pay.kiwify.com.br/74e3nB1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="gradient-btn px-8 py-4 rounded-xl text-base font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Quero fazer o treinamento
@@ -194,7 +196,9 @@ export default function Treinamento() {
                 Use estratégia, edição, thumbnails e IA para transformar sua produção de conteúdo.
               </p>
               <a
-                href="#"
+                href="https://pay.kiwify.com.br/74e3nB1"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="gradient-btn px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center gap-2"
               >
                 Entrar para o treinamento
