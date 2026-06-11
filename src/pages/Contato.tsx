@@ -16,11 +16,37 @@ export default function Contato() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+  
+    const data = new FormData()
+    data.append('nome', formData.name)
+    data.append('email', formData.email)
+    data.append('assunto', formData.subject)
+    data.append('mensagem', formData.message)
+  
+    data.append(
+      '_subject',
+      'Nova mensagem enviada pelo site Superando Resultados'
+    )
+  
+    data.append('_captcha', 'false')
+    data.append('_template', 'table')
+  
+    await fetch('https://formsubmit.co/superandoresultados@gmail.com', {
+      method: 'POST',
+      body: data,
+    })
+  
     setIsSubmitted(true)
     setTimeout(() => setIsSubmitted(false), 3000)
-    setFormData({ name: '', email: '', subject: '', message: '' })
+  
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    })
   }
 
   return (
