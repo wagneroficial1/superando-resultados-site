@@ -141,14 +141,14 @@ export default function Recursos() {
                   <p className="text-gray-400 leading-relaxed flex-1 mb-6">
                     {resource.description}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => openLeadModal(resource.file, resource.title)}
+                  <a
+                    href={resource.file}
+                    download
                     className="w-full py-3 rounded-xl gradient-btn text-sm font-semibold flex items-center justify-center gap-2"
                   >
                     <Download size={16} />
-                    {isUnlocked ? 'Baixar Agora' : 'Download Gratuito'}
-                  </button>
+                    Download Gratuito
+                  </a>
                 </div>
               </Section>
             )
