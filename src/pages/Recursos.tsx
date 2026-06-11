@@ -76,22 +76,20 @@ export default function Recursos() {
     setIsLoading(true)
 
     const { error } = await supabase
-      .from('leads')
-      .upsert(
-        {
-          nome: name,
-          email,
-        },
-        {
-          onConflict: 'email',
-        }
-      )
+    .from('leads')
+    .insert([
+      {
+        nome: name,
+        email: email,
+      },
+    ])
 
     setIsLoading(false)
 
     if (error) {
-      console.error('Erro ao salvar lead:', error)
+      console.error('Erro Supabase:', error)
       alert(error.message)
+      setIsLoading(false)
       return
     }
 
