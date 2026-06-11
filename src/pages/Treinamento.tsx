@@ -38,7 +38,7 @@ export default function Treinamento() {
               href="#"
               className="gradient-btn px-8 py-4 rounded-xl text-base font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
             >
-              Quero conhecer o treinamento
+              Quero fazer o treinamento
               <ArrowRight size={18} />
             </a>
           </div>
@@ -197,7 +197,7 @@ export default function Treinamento() {
                 href="#"
                 className="gradient-btn px-8 py-4 rounded-xl text-base font-semibold inline-flex items-center gap-2"
               >
-                Entrar na lista de interesse
+                Entrar para o treinamento
                 <ArrowRight size={18} />
               </a>
             </div>
