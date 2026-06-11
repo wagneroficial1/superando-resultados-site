@@ -10,6 +10,7 @@ export default function Treinamento() {
         description="Aprenda a criar vídeos melhores, thumbnails mais chamativas e usar ferramentas de IA para acelerar sua produção de conteúdo no YouTube."
         path="/treinamento"
       />
+    
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
