@@ -8,6 +8,7 @@ import Videos from './pages/Videos'
 import Laboratorio from './pages/Laboratorio'
 import Sobre from './pages/Sobre'
 import Contato from './pages/Contato'
+import Treinamento from './pages/Treinamento'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/recursos" element={<Recursos />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/laboratorio" element={<Laboratorio />} />
+          <Route path="/treinamento" element={<Treinamento />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>
