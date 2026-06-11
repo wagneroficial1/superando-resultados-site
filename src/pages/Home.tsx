@@ -82,10 +82,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <MetricCard icon={Users} value={190} suffix="K+" label="Inscritos no canal" />
-            <MetricCard icon={Eye} value={15} suffix="M+" label="Visualizações acumuladas" />
-            <MetricCard icon={Clock} value={8} suffix="+" label="Anos de experiência" />
-            <MetricCard icon={Wrench} value={300} suffix="+" label="Ferramentas analisadas" />
+            <MetricCard icon={Users} value={193} suffix="K+" label="Inscritos no canal" />
+            <MetricCard icon={Eye} value={9.5} suffix="M+" label="Visualizações acumuladas" />
+            <MetricCard icon={Clock} value={320} suffix="+" label="Vídeos públicados" />
+            <MetricCard icon={Wrench} value={720} suffix="+" label="Alunos do treinamento" />
           </div>
         </div>
       </Section>
