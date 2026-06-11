@@ -107,18 +107,21 @@ const tools = [
     description: 'Crie vídeos com avatares IA realistas. Perfeito para conteúdo educacional e marketing.',
     category: 'Vídeo IA',
     gradient: 'from-blue-600 to-indigo-500',
+    url: 'https://www.heygen.com/pt-br',
   },
   {
     name: 'Midjourney',
     description: 'Geração de imagens artísticas de alta qualidade. Ideal para thumbnails e arte de canal.',
     category: 'Imagem IA',
     gradient: 'from-purple-500 to-pink-500',
+    url: 'https://www.midjourney.com/explore?tab=top',
   },
   {
     name: 'Leonardo AI',
     description: 'Plataforma completa de geração de imagens com modelos especializados.',
     category: 'Imagem IA',
     gradient: 'from-violet-500 to-purple-600',
+    url: 'https://leonardo.ai/',
   },
 ]
 
